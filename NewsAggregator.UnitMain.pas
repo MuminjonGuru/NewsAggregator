@@ -59,7 +59,7 @@ begin
   // send API endpoint request
   RESTRequest1.Execute;
 
-    // parse the country code from the response
+  // parse the country code from the response
   try
     var JSONValue := TJSONObject.ParseJSONValue(RESTResponse1.Content);
     var JSONArray := JSONValue.GetValue<TJSONArray>('data');
@@ -124,8 +124,7 @@ begin
     JSONValue.Free;
   end;
 
-
-  // load images to the newly created TImage component
+  // load the image
   var HTTPClientDownloadPDF := TNetHTTPClient.Create(nil);
   var HTTPRequestDownloadPDF := TNetHTTPRequest.Create(nil);
 
