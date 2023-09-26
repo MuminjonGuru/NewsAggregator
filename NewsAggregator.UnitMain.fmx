@@ -1,0 +1,146 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'News Aggregator'
+  ClientHeight = 480
+  ClientWidth = 648
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ToolBarMain: TToolBar
+    Size.Width = 648.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object LblCaption: TLabel
+      Align = Client
+      StyledSettings = [Family, FontColor]
+      Size.Width = 568.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.HorzAlign = Center
+      Text = 'News Aggregator with mediastack and Web Page to PDF APIs'
+      TabOrder = 0
+    end
+    object BtnGetNews: TButton
+      Align = MostRight
+      Position.X = 568.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbuttonbordered'
+      TabOrder = 1
+      Text = 'Get News'
+      OnClick = BtnGetNewsClick
+    end
+  end
+  object ScrollBoxMain: TScrollBox
+    Align = Client
+    Size.Width = 648.000000000000000000
+    Size.Height = 440.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 648.000000000000000000
+    Viewport.Height = 440.000000000000000000
+    object Rectangle1: TRectangle
+      Align = Top
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 628.000000000000000000
+      Size.Height = 200.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Thickness = 0.100000001490116100
+      XRadius = 25.000000000000000000
+      YRadius = 20.000000000000000000
+      object Image1: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Align = MostLeft
+        Margins.Left = 15.000000000000000000
+        Margins.Top = 15.000000000000000000
+        Margins.Right = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.X = 15.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 200.000000000000000000
+        Size.Height = 170.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        StyledSettings = [Family, Style, FontColor]
+        TextSettings.Font.Size = 14.000000000000000000
+        Align = Client
+        Margins.Top = 15.000000000000000000
+        Margins.Right = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 383.000000000000000000
+        Size.Height = 133.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 379.000000000000000000
+        Viewport.Height = 129.000000000000000000
+      end
+      object Button1: TButton
+        Align = Bottom
+        StyledSettings = [Family, Style, FontColor]
+        Margins.Right = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.X = 230.000000000000000000
+        Position.Y = 163.000000000000000000
+        Size.Width = 383.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Get the Complete Copy'
+        TextSettings.Font.Size = 14.000000000000000000
+        OnClick = Button1Click
+      end
+    end
+  end
+  object RESTClient1: TRESTClient
+    Params = <>
+    SynchronizedEvents = False
+    Left = 280
+    Top = 320
+  end
+  object RESTRequest1: TRESTRequest
+    Client = RESTClient1
+    Params = <>
+    Response = RESTResponse1
+    SynchronizedEvents = False
+    Left = 272
+    Top = 384
+  end
+  object RESTResponse1: TRESTResponse
+    Left = 184
+    Top = 320
+  end
+  object RESTRequest2: TRESTRequest
+    Client = RESTClient2
+    Params = <>
+    Response = RESTResponse2
+    SynchronizedEvents = False
+    Left = 568
+    Top = 296
+  end
+  object RESTResponse2: TRESTResponse
+    Left = 464
+    Top = 296
+  end
+  object RESTClient2: TRESTClient
+    Params = <>
+    SynchronizedEvents = False
+    Left = 512
+    Top = 368
+  end
+end
